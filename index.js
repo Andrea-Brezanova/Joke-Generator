@@ -22,8 +22,8 @@ function createJoke(event) {
     // instead of text above, call the API and inside the callback insert the joke in the box and typewrite it
     let apiKey = "007360a0b0aabc68f2a54boff1b97tfc";
     let context =
-      "You are a funny and smart assistant that tells short and sweet jokes."
-    let prompt = "Generate a unique joke. Please do not repeat the joke from the previous prompt.";
+      "You are a funny and smart assistant that tells jokes. The answer must be provided in HTML format. Example: <p>This is a joke</p>. Separate the question and answer in different elements."
+    let prompt = "Generate a unique joke.";
     let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
     let jokeElement = document.querySelector("#joke");
